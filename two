@@ -1,7 +1,7 @@
 class employee:
   def __init__(self, name, family, age):
       self.name=name
-      self.family= family
+      self.family= family  
       self.age =age
 
 
