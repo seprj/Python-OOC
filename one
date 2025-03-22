@@ -1,0 +1,42 @@
+class Student:
+    # Class attribute: shared by all students
+    university = "Tehran University"
+    
+    def __init__(self, name, family, age):
+        
+        self.name = name          # Instance attribute
+        self.family = family      # Instance attribute
+        self.age = age           # Instance attribute
+    
+    def show(self) :
+        
+        print(f"\nStudent Information:")
+        print(f"Name: {self.name}")
+        print(f"Family: {self.family}")
+        print(f"Age: {self.age}")
+
+# Create student objects
+std1 = Student("ali", "ahmadi", 23)
+std2 = Student("reza", "rezaee", 21)
+std3 = Student("Mona", "Monaee", 24)
+
+# Modify instance attributes
+std1.name = "ahmad"
+std1.university = "Amirkabir"
+
+# Display individual student names
+print("\nStudent Names:")
+print(std1.name)
+print(std2.name)
+print(std3.name)
+
+# Show complete student information
+print("\nComplete Student Information:")
+std1.show()
+std2.show()
+std3.show()
+
+# Demonstrate class vs instance attributes
+print("\nUniversity Information:")
+print(f"Original university: {Student.university}")  # Access class attribute
+print(f"Std1's university: {std1.university}") 
