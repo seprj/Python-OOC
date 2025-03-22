@@ -1,0 +1,45 @@
+class employee:
+  def __init__(self, name, family, age):
+      self.name=name
+      self.family= family
+      self.age =age
+
+
+  def show(self):
+     
+        print(f"Name: {self.name}")
+        print(f"Family: {self.family}")
+        print(f"Age: {self.age}")
+   
+      
+class salary_employee(employee):
+  def __init__(self, salary, name, family, age):
+    self.salary= salary
+    super().__init__(name, family, age)
+
+  def show(self):
+        super().show()
+        print(f"salary:{self.salary}")
+
+class hourly_employee (employee):
+  def __init__(self, total, rate, name, family, age):
+    self.total = total
+    self.rate = rate
+
+    super().__init__(name, family, age)
+
+  def show(self):
+    super().show()
+    print(f"total hours:{self.total}")
+    print(f"hourly rate: {self.rate}")
+    print(f"Pay:{self.total} * {self.rate}")
+     
+
+print("\nSalary Employee:")
+s1 = salary_employee(5000, "Ali", "Ramezani", 35)
+s1.show()
+
+
+print("\nComplete employee Information:")  
+h1 = hourly_employee(300, 40000,"Kambiz","karzay",32)
+h1.show()     
