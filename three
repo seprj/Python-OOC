@@ -1,0 +1,41 @@
+import math
+
+class shape:
+    def calculatedArea(self):
+        pass
+
+class rectangle(shape):
+    def __init__(self, w, h, c):
+        self.width = w
+        self.height = h
+        self.__color = c
+
+    def calculatedArea(self):
+        return self.width * self.height
+
+    def set_color(self, color):
+        self.__color = color
+
+    def show(self):
+        """Display rectangle information including dimensions and color."""
+        print(f"Rectangle - Width: {self.width}, Height: {self.height}, Color: {self.__color}")
+
+class circle(shape):
+    def __init__(self, r):
+        self.radius = r
+
+    def calculatedArea(self):
+        return self.radius * self.radius * math.pi
+
+# Test the code
+r1 = rectangle(5, 8, "red")
+print(r1.calculatedArea())
+
+c1 = circle(6)
+print(c1.calculatedArea())
+
+r1.__color ="yellow" 
+r1.show()
+
+r1.set_color("blue")
+r1.show()
