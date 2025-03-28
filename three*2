@@ -1,0 +1,56 @@
+class Book():
+    
+
+    def __init__(self, Title, Author, Publication_year, ISBN, Price):
+        # Instance attributes
+        self.Title = Title
+        self.Author = Author
+        self.Publication_year = Publication_year
+        self.ISBN = ISBN
+        self.Price= Price
+        self.weight = 0
+    
+    def get_details(self,):
+      
+        print(f"\nTitle of This book is {self.Title} written by {self.Author} in {self.Publication_year} with ISBN {self.ISBN} and its price is {self.Price} dolar")
+        
+    def calculate_shipping_cost(self, weight):
+             self.weight += weight
+
+             print(f"\nshipping cost of This book is: {weight * 0.05} dolar")
+
+
+class PaperbackBook (Book):
+
+   def __init__(self,Title, Author, Publication_year, ISBN, Price, Page_count, weight):
+          super().__init__(Title, Author, Publication_year, ISBN, Price)
+          self.Page_count = Page_count
+          self.weight = weight
+          
+
+   def get_details(self):
+          super().get_details()
+          print(f"\nPage count of This book is {self.Page_count} and its weight is {self.weight} grams")
+
+class EBook(Book):
+
+    def __init__(self,Title, Author, Publication_year, ISBN, Price, Filesize, format):
+        super().__init__(Title, Author, Publication_year, ISBN, Price)
+        self.Filesize = Filesize
+        self.format =format
+    
+    def get_details(self):
+        super().get_details()
+        print(f"This is a EBook with size:{self.Filesize} MB and fromat:{self.format}")
+
+# Create book
+x = PaperbackBook("Great expectation", "Victor Hogo", 1880, 66, 25400, 500,1200)
+y = EBook("Holiday physic", "holiday", 1950, 36, 2600, 250, "PDF")
+
+# Demonstrate polymorphism
+
+x.get_details()
+x.calculate_shipping_cost(1200)
+
+y.get_details()
+y.calculate_shipping_cost(0)
