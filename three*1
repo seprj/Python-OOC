@@ -1,0 +1,59 @@
+class Vehicle:
+    # Class attributes
+    wheels = 4
+    total_vehicles = 0
+    
+    def __init__(self, brand, model, year):
+        # Instance attributes
+        self.brand = brand
+        self.model = model
+        self.year = year
+        self.mileage = 0
+        Vehicle.total_vehicles += 1
+    
+    def drive(self, miles):
+        self.mileage += miles
+        print(f"{self.brand} {self.model} drove {miles} miles")
+    
+    def describe(self):
+        print(f"\nThis {self.year} {self.brand} {self.model} has {self.mileage} miles")
+
+class Car(Vehicle):
+    def __init__(self, brand, model, year, doors):
+        super().__init__(brand, model, year)
+        self.doors = doors
+    
+    def describe(self):
+        super().describe()
+        print(f"It is a car with {self.doors} doors")
+
+class Truck(Vehicle):
+    def __init__(self, brand, model, year, capacity):
+        super().__init__(brand, model, year)
+        self.capacity = capacity
+    
+    def describe(self):
+        super().describe()
+        print(f"It is a truck with {self.capacity} ton capacity")
+
+# Create vehicles
+car = Car("Toyota", "Corolla", 2022, 4)
+truck= Truck("Ford", "F-150", 2023, 2.5)
+
+# Demonstrate polymorphism
+
+#for v in [car, truck]:
+    #v.describe()
+    #v.drive(100)
+    #v.describe()
+
+
+car.describe()        # Shows full description
+car.drive(50)         # Increases mileage by 50
+
+# Accessing Truck attributes and methods
+
+truck.describe()       # Shows full description
+truck.drive(75)        # Increases mileage by 75
+
+print(f"\nTotal vehicles created: {Vehicle.total_vehicles}")
