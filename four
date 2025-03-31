@@ -1,0 +1,102 @@
+def greater(x,y,z):
+  if(x>y and y>z):
+    return x
+  elif(y>x and y>z):
+    return y
+  else: 
+    return z
+
+print(greater(10,50,30)) 
+print(greater(9,3,5))    
+
+--------------------------------------------------
+def square(x):
+  z= x**6
+  return z
+
+print(square(2))  
+-----------------------------------------------------
+def sum (x,y,z):
+  return x+1,y+2,z+3
+x,y,z = sum (2,6,8) 
+print(x,y,z)
+
+
+-----------------------------------------------------
+def sid (x=3,y=5,z=8):
+  return x+1,y+2,z+3
+x,y,z = sid (z=6) 
+print(x,y,z)
+
+x,y,z = sid (5,9)
+print(x,y,z)
+-----------------------------------------------------
+def add (list):
+  list.append ("B")
+  return list
+
+my_list =['mashhad','semnan']
+z=add(my_list)
+print(z)  
+
+--------------------------------------------------------
+def my_func(x):
+  return x**5
+z= my_func(5)
+print(z)
+
+
+my_func = lambda x : x**5
+z= my_func(2)
+print(z)
+
+----------------------------------------------------------
+
+sum = lambda x,y : x+y
+z= sum(2,9)
+print(z)
+
+-----------------------------------------------------------
+nums = [2,5,3,4]
+def pow3(x):
+  return x**3
+print (map(pow3,nums))
+print (list(map(pow3, nums)))
+
+-------------------------------------------------------------
+ls=[36,26,96,25]
+p =[I*2 for I in ls]
+print (p)
+
+def avg (a1,a2,a3,a4,a5):
+  sum = a1+a2+a3+a4+a5
+  return sum/5
+z = avg (15,62,89,65,47)
+
+print (z)
+
+----------------------------------------------------------------
+def avg (*a): 
+  sum=0
+  for i in a:
+    sum = sum + i
+  return  sum /len(a)
+
+print(avg(5,9,8))  
+----------------------------------------------------------------
+L = ['Ahmad', 'Asghar','Akbar']
+for s in L:
+  print(s)
+
+L = ['Ahmad', 'Asghar','Akbar']
+for i, name in enumerate(L):
+  print(i, name)
+
+L = [('Ahmad',26), ('Asghar',69),('Akbar',32)]
+for name,age in L:
+  print (name,age)
+
+F = ['Ali', 'reza','sadegh']
+a = [15,50,63]
+for name,age in zip(F, a):
+  print(name, age)
