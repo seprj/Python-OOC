@@ -1,0 +1,31 @@
+
+""" dic ={"name":"ali","age":30 ,"city": "teh"}
+lft = ["arak", "khoy","birjand"]
+import pickle
+with open ("mybin.dat","wb") as f:
+    pickle.dump(dic,f)
+    pickle.dump(lft,f)  """
+
+
+
+
+""" import pickle
+with open ("mybin.dat","rb") as f:
+    ddd=pickle.load(f)
+    iii=pickle.load(f)
+    print(ddd)
+    print(iii)  """
+
+
+
+""" l = ["landon", "Italy","Cidney"]
+import pickle
+with open ("mybin.dat","ab+") as f:
+    pickle.dump(l,f)
+    f.seek(0)
+    ddd =pickle.load(f)
+    iii= pickle.load(f)
+    jjj =pickle.load(f)
+    print(ddd)
+    print(iii)
+    print(jjj) """
