@@ -1,0 +1,64 @@
+import os
+#os.mkdir("iman")
+#os.mkdir("iman/part4")
+#os.rename("iman","sepid")
+#os.rmdir("sepid/part4")
+#os.rmdir("sepid")
+#print(os.path.exists("iman"))
+
+#f= open ("tesy.txt","w")
+#f.write("sepide is a beautiful girl and she is 32 years\n")
+#f.close()
+
+#with open ("tesy.txt", "r") as f:
+    #d=f.read()
+    #print (d)
+    #print("*"*10)
+
+
+""" with open("seeey.txt","w") as g:
+    g.write("you are veri veri nice honey!\n")
+    g.write("you are smart!\n") """
+
+
+""" with open("seeey.txt","a") as g:
+    g.write("I know that darling!\n")
+    g.write("Thank you!\n") """
+
+""" with open("seeey.txt","r") as f:
+    r= f.read(20)
+    print(r) """
+
+
+
+""" with open("seeey.txt","r") as m:
+    h= m.readlines()
+    print(h)
+
+    for l in h:
+        print(l)
+        print("*"*5) """
+
+
+""" lst = ["Teh","\nshiraz","\nsari"]
+with open ("iiimn.txt","w") as j:
+    j.writelines(lst) """
+
+""" nm = ["\nTabriz","\nkhuzestan","\nsemnan"]
+with open ("iiimn.txt","a") as j:
+    j.writelines(nm) """
+
+
+""" lst = ["kashan","\ngilan","\nsari"]
+with open ("iiimn.txt","w+") as k:
+    k.writelines(lst)
+    k.seek(0)
+    t= k.read()
+    print(t) """
+
+
+
+
+
+
+
